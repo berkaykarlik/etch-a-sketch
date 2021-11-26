@@ -1,0 +1,23 @@
+body :first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#grid {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  border-style: solid;
+}
+
+#grid div {
+  transition: all 0.05s cubic-bezier(0.48, 1.55, 1, 1.7);
+}
+
+#grid div:hover {
+  transform: scale(1.5);
+  background-color: black;
+}
