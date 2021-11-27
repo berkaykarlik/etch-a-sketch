@@ -1,5 +1,7 @@
 
 const grid = document.querySelector('#grid');
+const slider = document.querySelector('#gridSize');
+const sizeValue = document.querySelector('#sizeValue');
 const clear_button = document.querySelector('#clear');
 
 
@@ -42,15 +44,21 @@ function clearGrid(){
     }
 }
 
-function restart() {
+function restart(value) {
     clearGrid();
-    createGrid(16);
+    createGrid(value);
     addEventListeners();
 }
 
 clear_button.addEventListener('click', () => {
-    restart();
+    restart(slider.value);
 });
 
+slider.oninput = function() {
+    let value = slider.value;
+    restart(value);
+    sizeValue.textContent = "Grid Size: " + value + "x" + value;
+}
 
-restart();
+
+restart(slider.value);

@@ -4,6 +4,14 @@ body :first-child {
   align-items: center;
 }
 
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
 #grid {
   display: flex;
   width: 500px;
